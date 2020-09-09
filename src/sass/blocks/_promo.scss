@@ -1,0 +1,66 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/main_bg.jpg') no-repeat 50%/cover;
+    padding: 190px;
+
+    &__title {
+        width: 535px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        position: relative;
+        z-index: 2;
+        padding-left: 10px;
+        @include before_circle;
+    }
+    &__btns {
+        width: 300px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        color: #000;
+        font-weight: bold;
+        font-size: 16px;
+        &:hover {
+            color: #000;
+            text-decoration: none;
+        }   
+    }
+}
+.planes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+    img {
+        width: 110px;
+        height: 110px;
+        animation: planes 8s linear infinite;
+    }
+}
+
+@keyframes planes {
+    0% {
+        transform: translate(-1450px, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
